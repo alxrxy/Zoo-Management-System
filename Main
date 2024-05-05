@@ -1,0 +1,17 @@
+package ilstu.edu;
+
+/**
+ * Starter for the Zoo menu
+ */
+public class Main {
+
+	/**
+	 * Creates an instance of the Zoo class and calls the menu
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Zoo zoo = new Zoo();
+		zoo.menu();
+	}
+}

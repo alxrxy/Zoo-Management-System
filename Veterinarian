@@ -1,0 +1,62 @@
+package ilstu.edu;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * Represents the queue of animals that are waiting to be visited by the
+ * veterinarian
+ */
+public class Veterinarian {
+
+	private Queue<Animal> vet;
+
+	/**
+	 * Initializes an empty queue to store animals that are waiting to be visited by
+	 * the veterinarian
+	 */
+	public Veterinarian() {
+		this.vet = new LinkedList<>();
+	}
+
+	/**
+	 * Adds an animal to the queue
+	 *
+	 * @param animal
+	 */
+	public void addToQueue(Animal animal) {
+		vet.add(animal);
+	}
+
+	/**
+	 * Returns and removes the next animal from the queue
+	 *
+	 * @return The next animal from the queue
+	 */
+	public Animal getNextAnimalToVisit() {
+		return vet.poll();
+	}
+
+	/**
+	 * Checks if the queue is empty
+	 *
+	 * @return true if the queue is empty or false if not.
+	 */
+	public boolean isVetEmpty() {
+		return vet.isEmpty();
+	}
+
+	/**
+	 * Displays the animals waiting to be visited by the veterinarian
+	 */
+	public void displayAnimalsToVisit() {
+
+		if (isVetEmpty()) {
+			System.out.println("No animals need the veterinarian.");
+		} else {
+			for (Animal animal : vet) {
+				System.out.println(animal);
+			}
+		}
+	}
+}

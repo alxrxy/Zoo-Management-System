@@ -1,0 +1,59 @@
+package ilstu.edu;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+/**
+ * Represents the list of animals in the zoo
+ * 
+ * Implements the Iterable interface to allow iteration
+ */
+public class List implements Iterable<Animal> {
+
+	private LinkedList<Animal> animals;
+
+	/**
+	 * Initializes an empty linked list to store the animals
+	 */
+	public List() {
+		this.animals = new LinkedList<>();
+	}
+
+	/**
+	 * Adds an animal to the list
+	 *
+	 * @param animal
+	 */
+	public void add(Animal animal) {
+		animals.add(animal);
+	}
+
+	/**
+	 * Removes an animal from the list
+	 *
+	 * @param animal
+	 */
+	public void remove(Animal animal) {
+		animals.remove(animal);
+	}
+
+	/**
+	 * Displays the list of animals
+	 */
+	public void display() {
+
+		for (Animal animal : animals) {
+			System.out.println(animal);
+		}
+	}
+
+	/**
+	 * Returns an iterator over the animals in the list
+	 *
+	 * @return animals Iterator
+	 */
+	@Override
+	public Iterator<Animal> iterator() {
+		return animals.iterator();
+	}
+}

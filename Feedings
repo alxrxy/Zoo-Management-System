@@ -1,0 +1,59 @@
+package ilstu.edu;
+
+import java.util.Stack;
+
+/**
+ * Represents a stack of animals that are waiting to be fed
+ */
+public class Feedings {
+
+	private Stack<Animal> feed;
+
+	/**
+	 * Initializes an empty stack to store the animals that are waiting to be fed
+	 */
+	public Feedings() {
+		this.feed = new Stack<>();
+	}
+
+	/**
+	 * Adds an animal to the feeding stack
+	 *
+	 * @param animal
+	 */
+	public void addToStack(Animal animal) {
+		feed.push(animal);
+	}
+
+	/**
+	 * Returns and removes the next animal from the feeding stack
+	 *
+	 * @return The next animal from the feeding stack
+	 */
+	public Animal getNextAnimalToFeed() {
+		return feed.pop();
+	}
+
+	/**
+	 * Checks if the feeding stack is empty
+	 *
+	 * @return true if the feeding stack is empty or false if not
+	 */
+	public boolean isFeedEmpty() {
+		return feed.isEmpty();
+	}
+
+	/**
+	 * Displays the animals that are waiting to be fed
+	 */
+	public void displayAnimalsToFeed() {
+
+		if (feed.isEmpty()) {
+			System.out.println("No animals waiting to be fed.");
+		} else {
+			for (Animal animal : feed) {
+				System.out.println(animal);
+			}
+		}
+	}
+}

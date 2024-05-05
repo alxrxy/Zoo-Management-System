@@ -1,0 +1,132 @@
+package ilstu.edu;
+
+/**
+ * Represents an animal in the zoo
+ */
+public class Animal {
+
+	private String name;
+	private String species;
+	private int age;
+	private String food;
+	private String foodAmount;
+	private int feedingsPerDay;
+
+	/**
+	 * Constructs a new Animal object with the given parameters
+	 */
+	public Animal(String name, String species, int age, String food, String foodAmount, int feedingsPerDay) {
+
+		this.name = name;
+		this.species = species;
+		this.age = age;
+		this.food = food;
+		this.foodAmount = foodAmount;
+		this.feedingsPerDay = feedingsPerDay;
+	}
+
+	/**
+	 * @return The name of the animal
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Sets the name of the animal
+	 * 
+	 * @param name
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return The species of the animal
+	 */
+	public String getSpecies() {
+		return species;
+	}
+
+	/**
+	 * Sets the species of the animal
+	 * 
+	 * @param species
+	 */
+	public void setSpecies(String species) {
+		this.species = species;
+	}
+
+	/**
+	 * @return The age of the animal
+	 */
+	public int getAge() {
+		return age;
+	}
+
+	/**
+	 * Sets the age of the animal
+	 * 
+	 * @param age
+	 */
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	/**
+	 * @return The food of the animal
+	 */
+	public String getFood() {
+		return food;
+	}
+
+	/**
+	 * Sets the food of the animal
+	 * 
+	 * @param food
+	 */
+	public void setFood(String food) {
+		this.food = food;
+	}
+
+	/**
+	 * @return The amount of food the animal has
+	 */
+	public String getFoodAmount() {
+		return foodAmount;
+	}
+
+	/**
+	 * Sets the amount of food the animal has
+	 * 
+	 * @param foodAmount
+	 */
+	public void setFoodAmount(String foodAmount) {
+		this.foodAmount = foodAmount;
+	}
+
+	/**
+	 * @return The amount of feedings per day
+	 */
+	public int getFeedingsPerDay() {
+		return feedingsPerDay;
+	}
+
+	/**
+	 * Sets the amount of feedings per day
+	 * 
+	 * @param feedingsPerDay
+	 */
+	public void setFeedingsPerDay(int feedingsPerDay) {
+		this.feedingsPerDay = feedingsPerDay;
+	}
+
+	/**
+	 * @return The details of the animal
+	 */
+	@Override
+	public String toString() {
+		return "Animal{" + "name='" + name + '\'' + ", species='" + species + '\'' + ", age=" + age + ", food='" + food
+				+ '\'' + ", foodAmount='" + foodAmount + '\'' + ", feedingsPerDay=" + feedingsPerDay + '}';
+	}
+}
